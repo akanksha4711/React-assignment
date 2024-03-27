@@ -10,13 +10,13 @@ export default function(props){
       <h1>List of products</h1>
       <button onClick={()=>{
         // console.log("button1 clicked")
-        const copyProducts = [products];
+        const copyProducts = [...products];
         copyProducts.sort((a,b) => a.title.localeCompare(b.title));
         setProducts(copyProducts);
       }}>Sort by title</button>
       <button onClick={()=>{
         // console.log("button2 clicked")
-        const copyProducts = [products];
+        const copyProducts = [...products];
         copyProducts.sort((a,b) => a.price - b.price);
         setProducts(copyProducts);
       }}>Sort by price</button>
